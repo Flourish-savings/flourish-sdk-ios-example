@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2F73C042B9F86DD00EA7B33 /* FlourishSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C2F73C032B9F86DD00EA7B33 /* FlourishSDK */; };
 		F2A238832B9E1B25003B690E /* SdkExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238822B9E1B25003B690E /* SdkExampleApp.swift */; };
 		F2A238852B9E1B25003B690E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238842B9E1B25003B690E /* ContentView.swift */; };
 		F2A238872B9E1B26003B690E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A238862B9E1B26003B690E /* Assets.xcassets */; };
@@ -15,9 +16,6 @@
 		F2A238952B9E1BEB003B690E /* PaymentServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238942B9E1BEB003B690E /* PaymentServicesView.swift */; };
 		F2A238972B9E1BFD003B690E /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238962B9E1BFD003B690E /* RewardsView.swift */; };
 		F2A238992B9E1C0A003B690E /* TransfersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238982B9E1C0A003B690E /* TransfersView.swift */; };
-		F2A238A32B9E1C92003B690E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F2A238A22B9E1C92003B690E /* Alamofire */; };
-		F2A238A52B9E1C92003B690E /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F2A238A42B9E1C92003B690E /* AlamofireDynamic */; };
-		F2A238B02B9E6A12003B690E /* FlourishSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F2A238AF2B9E6A12003B690E /* FlourishSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,20 +36,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A238A32B9E1C92003B690E /* Alamofire in Frameworks */,
-				F2A238A52B9E1C92003B690E /* AlamofireDynamic in Frameworks */,
-				F2A238B02B9E6A12003B690E /* FlourishSDK in Frameworks */,
+				C2F73C042B9F86DD00EA7B33 /* FlourishSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C26EB9892B9F42F8006B121E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2A238762B9E1B25003B690E = {
 			isa = PBXGroup;
 			children = (
 				F2A238812B9E1B25003B690E /* SdkExample */,
 				F2A238802B9E1B25003B690E /* Products */,
+				C26EB9892B9F42F8006B121E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +116,7 @@
 			);
 			name = SdkExample;
 			packageProductDependencies = (
-				F2A238A22B9E1C92003B690E /* Alamofire */,
-				F2A238A42B9E1C92003B690E /* AlamofireDynamic */,
-				F2A238AF2B9E6A12003B690E /* FlourishSDK */,
+				C2F73C032B9F86DD00EA7B33 /* FlourishSDK */,
 			);
 			productName = SdkExample;
 			productReference = F2A2387F2B9E1B25003B690E /* SdkExample.app */;
@@ -145,8 +147,7 @@
 			);
 			mainGroup = F2A238762B9E1B25003B690E;
 			packageReferences = (
-				F2A238A12B9E1C92003B690E /* XCRemoteSwiftPackageReference "Alamofire" */,
-				F2A238AE2B9E6A12003B690E /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */,
+				C2F73C022B9F86DD00EA7B33 /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */,
 			);
 			productRefGroup = F2A238802B9E1B25003B690E /* Products */;
 			projectDirPath = "";
@@ -396,38 +397,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F2A238A12B9E1C92003B690E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.0;
-			};
-		};
-		F2A238AE2B9E6A12003B690E /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */ = {
+		C2F73C022B9F86DD00EA7B33 /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flourish-savings/flourish-sdk-ios";
 			requirement = {
-				branch = main;
+				branch = "feature/CE-673_events";
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F2A238A22B9E1C92003B690E /* Alamofire */ = {
+		C2F73C032B9F86DD00EA7B33 /* FlourishSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F2A238A12B9E1C92003B690E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		F2A238A42B9E1C92003B690E /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F2A238A12B9E1C92003B690E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-		F2A238AF2B9E6A12003B690E /* FlourishSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F2A238AE2B9E6A12003B690E /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */;
+			package = C2F73C022B9F86DD00EA7B33 /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */;
 			productName = FlourishSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

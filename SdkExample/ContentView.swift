@@ -1,12 +1,17 @@
-//
-//  ContentView.swift
-//  SdkExample
-//
-//  Created by Yuri Logatto Pamplona on 10/03/24.
-//
-
 import SwiftUI
 import FlourishSDK
+
+class EventListenerWrapper: EventListener {
+    var eventGenerator: EventGenerator?
+    
+    func configure(){
+        self.eventGenerator = EventGenerator(eventListener: self)
+    }
+    
+    func didReceiveEvent(data: Any) {
+        print("Received on ExampleApp: \(data)")
+    }
+}
 
 struct ContentView: View {
     @EnvironmentObject private var flourishSdkManager: FlourishSdkManager
@@ -34,7 +39,10 @@ struct ContentView: View {
                     Text("Rewards")
                 }
         }.onAppear {
-            flourishSdkManager.initialize { _ in }
+            let eventListenerWrapper = EventListenerWrapper()
+            eventListenerWrapper.configure()
+            
+            flourishSdkManager.initialize(completion: { _ in  }, eventGenerator: eventListenerWrapper.eventGenerator!)
         }
     }
 }
