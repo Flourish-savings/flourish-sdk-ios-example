@@ -2,12 +2,6 @@ import SwiftUI
 import FlourishSDK
 
 class EventListenerWrapper: EventListener {
-    var eventGenerator: EventGenerator?
-    
-    func configure(){
-        self.eventGenerator = EventGenerator(eventListener: self)
-    }
-    
     func didReceiveEvent(data: Any) {
         print("Received on ExampleApp: \(data)")
     }
@@ -40,9 +34,8 @@ struct ContentView: View {
                 }
         }.onAppear {
             let eventListenerWrapper = EventListenerWrapper()
-            eventListenerWrapper.configure()
             
-            flourishSdkManager.initialize(completion: { _ in  }, eventGenerator: eventListenerWrapper.eventGenerator!)
+            flourishSdkManager.initialize(completion: { _ in  }, eventListener: eventListenerWrapper)
         }
     }
 }
