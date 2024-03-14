@@ -401,7 +401,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flourish-savings/flourish-sdk-ios";
 			requirement = {
-				branch = "feature/CE-673_events";
+				branch = main;
 				kind = branch;
 			};
 		};
