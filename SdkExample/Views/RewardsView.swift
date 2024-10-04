@@ -10,7 +10,7 @@ import FlourishSDK
 
 struct RewardsView: View {
     
-    @EnvironmentObject private var flourishSdkManager: FlourishSdkManager
+    var flourishSdkManager: FlourishSdkManager
     
     var body: some View {
         FlourishSdkView(flourishSdkManager: flourishSdkManager).edgesIgnoringSafeArea(.all)
@@ -18,5 +18,5 @@ struct RewardsView: View {
 }
 
 #Preview {
-    RewardsView()
+   RewardsView()
 }
