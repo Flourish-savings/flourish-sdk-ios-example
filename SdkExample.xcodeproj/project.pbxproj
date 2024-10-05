@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2F73C042B9F86DD00EA7B33 /* FlourishSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C2F73C032B9F86DD00EA7B33 /* FlourishSDK */; };
+		280863B230E1D05BDB96CDBB /* Pods_SdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA21958717B9ABFEB0CBF8A9 /* Pods_SdkExample.framework */; };
 		F2A238832B9E1B25003B690E /* SdkExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238822B9E1B25003B690E /* SdkExampleApp.swift */; };
 		F2A238852B9E1B25003B690E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A238842B9E1B25003B690E /* ContentView.swift */; };
 		F2A238872B9E1B26003B690E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A238862B9E1B26003B690E /* Assets.xcassets */; };
@@ -19,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18EA398227BD8CBAE176520C /* Pods-SdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SdkExample.release.xcconfig"; path = "Target Support Files/Pods-SdkExample/Pods-SdkExample.release.xcconfig"; sourceTree = "<group>"; };
+		53CD634ED351795BFF2D57AE /* Pods-SdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SdkExample.debug.xcconfig"; path = "Target Support Files/Pods-SdkExample/Pods-SdkExample.debug.xcconfig"; sourceTree = "<group>"; };
+		DA21958717B9ABFEB0CBF8A9 /* Pods_SdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A2387F2B9E1B25003B690E /* SdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A238822B9E1B25003B690E /* SdkExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkExampleApp.swift; sourceTree = "<group>"; };
 		F2A238842B9E1B25003B690E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,16 +39,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2F73C042B9F86DD00EA7B33 /* FlourishSDK in Frameworks */,
+				280863B230E1D05BDB96CDBB /* Pods_SdkExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2436C23F9FE93D197E023785 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53CD634ED351795BFF2D57AE /* Pods-SdkExample.debug.xcconfig */,
+				18EA398227BD8CBAE176520C /* Pods-SdkExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C26EB9892B9F42F8006B121E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA21958717B9ABFEB0CBF8A9 /* Pods_SdkExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,6 +69,7 @@
 				F2A238812B9E1B25003B690E /* SdkExample */,
 				F2A238802B9E1B25003B690E /* Products */,
 				C26EB9892B9F42F8006B121E /* Frameworks */,
+				2436C23F9FE93D197E023785 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,18 +120,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A2388E2B9E1B26003B690E /* Build configuration list for PBXNativeTarget "SdkExample" */;
 			buildPhases = (
+				7986F6CB97F87C2461C9761B /* [CP] Check Pods Manifest.lock */,
 				F2A2387B2B9E1B25003B690E /* Sources */,
 				F2A2387C2B9E1B25003B690E /* Frameworks */,
 				F2A2387D2B9E1B25003B690E /* Resources */,
+				76EA9437F85EF9ECF7809BAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SdkExample;
-			packageProductDependencies = (
-				C2F73C032B9F86DD00EA7B33 /* FlourishSDK */,
-			);
 			productName = SdkExample;
 			productReference = F2A2387F2B9E1B25003B690E /* SdkExample.app */;
 			productType = "com.apple.product-type.application";
@@ -146,9 +159,6 @@
 				Base,
 			);
 			mainGroup = F2A238762B9E1B25003B690E;
-			packageReferences = (
-				C2F73C022B9F86DD00EA7B33 /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */,
-			);
 			productRefGroup = F2A238802B9E1B25003B690E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +179,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76EA9437F85EF9ECF7809BAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SdkExample/Pods-SdkExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SdkExample/Pods-SdkExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SdkExample/Pods-SdkExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7986F6CB97F87C2461C9761B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SdkExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2A2387B2B9E1B25003B690E /* Sources */ = {
@@ -303,6 +355,7 @@
 		};
 		F2A2388F2B9E1B26003B690E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53CD634ED351795BFF2D57AE /* Pods-SdkExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +392,7 @@
 		};
 		F2A238902B9E1B26003B690E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18EA398227BD8CBAE176520C /* Pods-SdkExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,25 +449,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C2F73C022B9F86DD00EA7B33 /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Flourish-savings/flourish-sdk-ios";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C2F73C032B9F86DD00EA7B33 /* FlourishSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C2F73C022B9F86DD00EA7B33 /* XCRemoteSwiftPackageReference "flourish-sdk-ios" */;
-			productName = FlourishSDK;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2A238772B9E1B25003B690E /* Project object */;
 }

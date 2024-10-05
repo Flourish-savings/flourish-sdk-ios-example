@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.9.1)
+  - FlourishSDK (0.1.0):
+    - Alamofire (~> 5.9)
+
+DEPENDENCIES:
+  - FlourishSDK (~> 0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FlourishSDK
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  FlourishSDK: e9f20c58530d2c99e26d793a190c703c5a688a43
+
+PODFILE CHECKSUM: d305dc25ecc5a56a8e0d7a4f7557f404d5fe9583
+
+COCOAPODS: 1.15.2

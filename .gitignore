@@ -44,3 +44,4 @@ xc4/
 *.xcdb-shm
 
 .DS_Store
+/Pods/
